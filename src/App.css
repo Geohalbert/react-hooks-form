@@ -31,3 +31,11 @@ h4 {
   color: #EAEAEA;
   font-family: 'Merriweather', serif;
 }
+
+form {
+  min-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
