@@ -70,7 +70,7 @@ export default function App() {
         />
 
         <button type="submit" name="Submit" disabled={isDisabled}>
-          Next <White_Arrow />
+          Next <White_Arrow className="arrow" />
         </button>
       </form>
     </div>

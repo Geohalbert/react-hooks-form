@@ -4,16 +4,14 @@ import "../styles/InputField.css";
 export default function InputField(props) {
   const {
     autoFocus,
-    required,
     label,
+    name,
     onChange,
     pattern,
     placeholder,
+    required,
     type,
-    name,
-    value,
-    validationFnc,
-    ...rest
+    value
   } = props;
 
   // needed for displaying "REQUIRED" label
@@ -24,6 +22,7 @@ export default function InputField(props) {
     <div className="field">
       <div className="labels">
         <label>{label} </label>
+        {/* 'REQUIRED' label appears with conditionals */}
         {showLabel && required && <span className="reqLabel">REQUIRED</span>}
       </div>
       <input
