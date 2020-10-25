@@ -13,16 +13,20 @@ export default function App() {
   const isDisabled = !firstName || !lastName || !address1;
   const handleSubmit = evt => {
     evt.preventDefault();
-    alert(`Submitting`);
+    alert(
+      `First name: ${firstName}, Last name: ${lastName}, Address: ${address1}, Address2: ${
+        address2 ? address2 : "none"
+      } `
+    );
   };
   return (
     <div className="App">
       <div className="greeting">
         <GiantRobotLTD_Logo className="robotLogo" />
-        <div className="welcome">Welcome</div>
-        <div className="subText">
+        <span className="welcome">Welcome</span>
+        <span className="subText">
           Please tell us a bit about yourself to get started.
-        </div>
+        </span>
       </div>
 
       <form onSubmit={handleSubmit}>
