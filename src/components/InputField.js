@@ -16,10 +16,16 @@ export default function InputField(props) {
     ...rest
   } = props;
 
+  // needed for displaying "REQUIRED" label
+  const patt = new RegExp(pattern);
+  const showLabel = !patt.test(value);
+
   return (
     <div className="field">
-      <label>{label}</label>
-      {/* insert conditional for 'REQUIRED' label */}
+      <div className="labels">
+        <label>{label} </label>
+        {showLabel && required && <span className="reqLabel">REQUIRED</span>}
+      </div>
       <input
         autoFocus={autoFocus}
         type={type}
