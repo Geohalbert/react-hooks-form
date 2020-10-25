@@ -71,7 +71,9 @@ export default function App() {
           label="ADDRESS 2 (OPTIONAL)"
           name="address2"
           value={address2}
-          pattern="^[A-Za-z0-9'\.\-\s\,]"
+          minlength="5"
+          title="Must be at least 5 characters"
+          pattern="^[A-Za-z0-9'\.\-\s\,]{5,}"
           onChange={e => setAddress2(e.target.value)}
         />
 
