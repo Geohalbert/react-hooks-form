@@ -21,14 +21,15 @@ export default function App() {
   };
   return (
     <div className="App">
-      <div className="greeting">
-        <GiantRobotLTD_Logo className="robotLogo" />
-        <span className="welcome">Welcome</span>
-        <span className="subText">
-          Please tell us a bit about yourself to get started.
-        </span>
+      <div className="leftPanel">
+        <div className="greetingContainer">
+          <GiantRobotLTD_Logo className="robotLogo" />
+          <span className="welcome">Welcome</span>
+          <span className="subText">
+            Please tell us a bit about yourself to get started.
+          </span>
+        </div>
       </div>
-
       <form onSubmit={handleSubmit}>
         <InputField
           autoFocus
