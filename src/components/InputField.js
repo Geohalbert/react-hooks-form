@@ -27,16 +27,16 @@ export default function InputField(props) {
         {showLabel && required && <span className="reqLabel">REQUIRED</span>}
       </div>
       <input
-        id={name}
         autoFocus={autoFocus}
-        type={type}
+        id={name}
         name={name}
-        value={value}
-        required={required}
-        pattern={pattern}
-        title={title}
-        placeholder={placeholder}
         onChange={text => onChange(text)}
+        pattern={pattern}
+        placeholder={placeholder}
+        required={required}
+        title={title}
+        type={type}
+        value={value}
       />
     </div>
   );

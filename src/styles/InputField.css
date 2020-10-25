@@ -1,23 +1,22 @@
 label {
     color: #666666;
+    font-family: "Merriweather", serif;
     font-size: 12px;
     font-weight: 400;
-    font-family: "Merriweather", serif;
 }
 
 .labels {
-
-    margin-left: 24px;
-    margin-bottom: 5px;
     display: "flex";
     flex-direction: column;
+    margin-bottom: 5px;
+    margin-left: 24px;
 }
 
 .reqLabel {
     color: #E70000;
+    font-family: "Merriweather", serif;
     font-size: 12px;
     font-weight: 400;
-    font-family: "Merriweather", serif;
 }
 
 input:invalid {
@@ -37,31 +36,31 @@ input:focus {
 
 input:focus:invalid {
     outline: none;
-  }
+}
 
 input {
+    background-color: #f7f7f7;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
     box-sizing: border-box;
-    width: inherit;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 48px;
+    margin-left: 24px;
     max-width: 376px;
     padding-left: 16px;
-    background-color: #f7f7f7;
-    border-radius: 6px;
-    border: 1px solid #EAEAEA;
-    margin-left: 24px;
-    color: #666666;
-    font-weight: 400;
-    font-family: 'Roboto', sans-serif;
-    height: 48px;
-    font-size: 14px;
+    width: inherit;
 }
 
 .field {
-    width: inherit;
-    max-width: 400px;
-    margin: 0 0 24px 0;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    margin: 0 0 24px 0;
+    max-width: 400px;
+    width: inherit;
 }
 
 @media(max-width:935px) {
