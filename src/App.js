@@ -34,6 +34,7 @@ export default function App() {
           name="firstName"
           minlength="2"
           value={firstName}
+          title="Must be at least 2 non-digit characters"
           pattern="([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
           onChange={e => setFirstName(e.target.value)}
         />
@@ -45,6 +46,7 @@ export default function App() {
           name="lastName"
           minlength="2"
           value={lastName}
+          title="Must be at least 2 non-digit characters"
           pattern="([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
           onChange={e => setLastName(e.target.value)}
         />
@@ -55,6 +57,8 @@ export default function App() {
           label="ADDRESS"
           name="address1"
           value={address1}
+          minlength="5"
+          title="Must be at least 5 characters"
           pattern="^[A-Za-z0-9'\.\-\s\,]{5,}"
           onChange={e => setAddress1(e.target.value)}
         />

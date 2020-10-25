@@ -10,6 +10,7 @@ export default function InputField(props) {
     pattern,
     placeholder,
     required,
+    title,
     type,
     value
   } = props;
@@ -33,6 +34,7 @@ export default function InputField(props) {
         value={value}
         required={required}
         pattern={pattern}
+        title={title}
         placeholder={placeholder}
         onChange={text => onChange(text)}
       />
