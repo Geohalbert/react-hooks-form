@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ReactComponent as GiantRobotLTD_Logo } from "./assets/GiantRobotLTD_Logo.svg";
 import { ReactComponent as White_Arrow } from "./assets/White_Arrow.svg";
 import InputField from "./components/InputField";
-import "./App.css";
+import "./styles/App.css";
 
 export default function App() {
   const [firstName, setFirstName] = useState("");
