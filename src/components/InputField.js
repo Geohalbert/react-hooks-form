@@ -21,11 +21,12 @@ export default function InputField(props) {
   return (
     <div className="field">
       <div className="labels">
-        <label>{label} </label>
+        <label for={name}>{label} </label>
         {/* 'REQUIRED' label appears with conditionals */}
         {showLabel && required && <span className="reqLabel">REQUIRED</span>}
       </div>
       <input
+        id={name}
         autoFocus={autoFocus}
         type={type}
         name={name}

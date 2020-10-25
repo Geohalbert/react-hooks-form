@@ -18,14 +18,13 @@ export default function App() {
   return (
     <div className="App">
       <div className="greeting">
-        <div className="robotLogo">
-          <GiantRobotLTD_Logo />
-        </div>
+        <GiantRobotLTD_Logo className="robotLogo" />
         <div className="welcome">Welcome</div>
         <div className="subText">
           Please tell us a bit about yourself to get started.
         </div>
       </div>
+
       <form onSubmit={handleSubmit}>
         <InputField
           autoFocus
@@ -56,8 +55,7 @@ export default function App() {
           label="ADDRESS"
           name="address1"
           value={address1}
-          minlength="5"
-          pattern="^[A-Za-z0-9'\.\-\s\,]"
+          pattern="^[A-Za-z0-9'\.\-\s\,]{5,}"
           onChange={e => setAddress1(e.target.value)}
         />
         <InputField
