@@ -11,17 +11,27 @@ export default function App() {
   const [address2, setAddress2] = useState("");
 
   const isDisabled = !firstName || !lastName || !address1;
-  const inputs = document.querySelectorAll("input, select, textarea");
+  const inputs = document.querySelectorAll("input");
 
   inputs.forEach(input => {
+    const elemId = input.getAttribute("id");
+    const reqId = elemId + "ReqLabel";
+    const checky = input.getAttribute("required");
+    if (input.validity.valid && checky !== null) {
+      document.getElementById(reqId).classList.remove("showing");
+    }
     input.addEventListener(
       "invalid",
       event => {
         input.classList.add("error");
+        if (checky !== null) {
+          document.getElementById(reqId).classList.add("showing");
+        }
       },
       false
     );
   });
+
   const handleSubmit = evt => {
     evt.preventDefault();
     alert(
@@ -30,15 +40,16 @@ export default function App() {
       } `
     );
   };
+
   return (
     <div className="App">
       <div className="leftPanel">
         <div className="greetingContainer">
           <GiantRobotLTDLogo className="robotLogo" />
-          <span className="welcome">Welcome</span>
-          <span className="subText">
+          <p className="welcome">Welcome</p>
+          <p className="subText">
             Please tell us a bit about yourself to get started.
-          </span>
+          </p>
         </div>
       </div>
       <form onSubmit={handleSubmit}>

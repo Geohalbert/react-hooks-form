@@ -7,16 +7,21 @@ label {
 
 .labels {
     display: "flex";
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 5px;
     margin-left: 24px;
 }
 
-.reqLabel {
-    color: #E70000;
+span.showing {
+    display: block;
+    color: red;
     font-family: "Merriweather", serif;
     font-size: 12px;
     font-weight: 400;
+}
+
+span {
+    display: none;
 }
 
 input.error {
