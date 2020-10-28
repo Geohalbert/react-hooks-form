@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ReactComponent as GiantRobotLTD_Logo } from "./assets/GiantRobotLTD_Logo.svg";
-import { ReactComponent as White_Arrow } from "./assets/White_Arrow.svg";
+import { ReactComponent as GiantRobotLTDLogo } from "./assets/GiantRobotLTD_Logo.svg";
+import { ReactComponent as WhiteArrow } from "./assets/White_Arrow.svg";
 import InputField from "./components/InputField";
 import "./styles/App.css";
 
@@ -23,7 +23,7 @@ export default function App() {
     <div className="App">
       <div className="leftPanel">
         <div className="greetingContainer">
-          <GiantRobotLTD_Logo className="robotLogo" />
+          <GiantRobotLTDLogo className="robotLogo" />
           <span className="welcome">Welcome</span>
           <span className="subText">
             Please tell us a bit about yourself to get started.
@@ -79,7 +79,7 @@ export default function App() {
         />
 
         <button type="submit" name="Submit" disabled={isDisabled}>
-          Next <White_Arrow className="arrow" />
+          Next <WhiteArrow className="arrow" />
         </button>
       </form>
     </div>
