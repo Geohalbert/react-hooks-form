@@ -19,7 +19,12 @@ label {
     font-weight: 400;
 }
 
-input:invalid {
+input.error {
+    background-color: #ffffff;
+    border: 1px solid #E70000;
+  }
+
+input:invalid, input:not[value=""] {
     background-color: #ffffff;
     border: 1px solid #E70000;
 }
@@ -61,12 +66,13 @@ input {
 }
 
 @media(max-width:935px) {
+    form {
+        min-width: 420px;
+    }
     input {
-        max-width: 376px;
         width: inherit;
     }
     .field {
-        max-width: 400px;
         width: inherit;
     }
 }

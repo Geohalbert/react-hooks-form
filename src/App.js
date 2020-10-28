@@ -11,6 +11,17 @@ export default function App() {
   const [address2, setAddress2] = useState("");
 
   const isDisabled = !firstName || !lastName || !address1;
+  const inputs = document.querySelectorAll("input, select, textarea");
+
+  inputs.forEach(input => {
+    input.addEventListener(
+      "invalid",
+      event => {
+        input.classList.add("error");
+      },
+      false
+    );
+  });
   const handleSubmit = evt => {
     evt.preventDefault();
     alert(
@@ -40,7 +51,7 @@ export default function App() {
           minlength="2"
           value={firstName}
           title="Must be at least 2 non-digit characters"
-          pattern="([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
+          pattern="([azA-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
           onChange={e => setFirstName(e.target.value)}
         />
 
@@ -52,7 +63,7 @@ export default function App() {
           minlength="2"
           value={lastName}
           title="Must be at least 2 non-digit characters"
-          pattern="([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
+          pattern="([a-zA-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
           onChange={e => setLastName(e.target.value)}
         />
 
@@ -64,7 +75,7 @@ export default function App() {
           value={address1}
           minlength="5"
           title="Must be at least 5 characters"
-          pattern="^[A-Za-z0-9'\.\-\s\,]{5,}"
+          pattern="[a-zA-ZÀ-ÿ0-9 /\\#.,&\(\)]{5,35}"
           onChange={e => setAddress1(e.target.value)}
         />
         <InputField
@@ -74,7 +85,7 @@ export default function App() {
           value={address2}
           minlength="5"
           title="Must be at least 5 characters"
-          pattern="^[A-Za-z0-9'\.\-\s\,]{5,}"
+          pattern="[a-zA-ZÀ-ÿ0-9 /\\#.,&\(\)]{5,35}"
           onChange={e => setAddress2(e.target.value)}
         />
 

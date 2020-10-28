@@ -82,6 +82,7 @@ button:disabled {
 
 @media(max-width:935px) {
   .App {
+    min-width: 400px;
     flex-direction: column;
     width: 100%;
   }
@@ -90,6 +91,7 @@ button:disabled {
     max-width: inherit;
   }
   .leftPanel {
+    min-width: 100%;
     height: auto;
   }
   form {
