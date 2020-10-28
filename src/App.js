@@ -16,15 +16,14 @@ export default function App() {
   inputs.forEach(input => {
     const elemId = input.getAttribute("id");
     const reqId = elemId + "ReqLabel";
-    const checky = input.getAttribute("required");
-    if (input.validity.valid && checky !== null) {
+    if (input.validity.valid && input.getAttribute("required") !== null) {
       document.getElementById(reqId).classList.remove("showing");
     }
     input.addEventListener(
       "invalid",
       event => {
         input.classList.add("error");
-        if (checky !== null) {
+        if (input.getAttribute("required") !== null) {
           document.getElementById(reqId).classList.add("showing");
         }
       },
@@ -35,7 +34,7 @@ export default function App() {
   const handleSubmit = evt => {
     evt.preventDefault();
     alert(
-      `First name: ${firstName}, Last name: ${lastName}, Address: ${address1}, Address2: ${
+      `First name: ${firstName} \nLast name: ${lastName} \nAddress: ${address1} \nAddress2: ${
         address2 ? address2 : "none"
       } `
     );
