@@ -30,12 +30,9 @@ input:valid {
 }
 
 input:focus {
+    outline: none;
     background-color: #ffffff;
     border: 1px solid #00adee;
-}
-
-input:focus:invalid {
-    outline: none;
 }
 
 input {
