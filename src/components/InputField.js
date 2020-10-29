@@ -19,7 +19,7 @@ export default function InputField(props) {
     <div className="field">
       <div className="labels">
         <label for={name}>{label} </label>
-        here the warning labe is used
+        {/* here the warning labe is used */}
         {required && (
           <span className="reqLabel" id={name + "ReqLabel"}>
             REQUIRED
