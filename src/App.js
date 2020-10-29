@@ -51,58 +51,61 @@ export default function App() {
           </p>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <InputField
-          autoFocus
-          required
-          type="text"
-          label="FIRST NAME"
-          name="firstName"
-          minlength="2"
-          value={firstName}
-          title="Must be at least 2 non-digit characters"
-          pattern="([azA-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
-          onChange={e => setFirstName(e.target.value)}
-        />
+      <div className="rightPanel">
+        <form onSubmit={handleSubmit}>
+          <InputField
+            autoFocus
+            required
+            type="text"
+            label="FIRST NAME"
+            name="firstName"
+            minlength="2"
+            value={firstName}
+            title="Must be at least 2 non-digit characters"
+            pattern="([azA-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
+            onChange={e => setFirstName(e.target.value)}
+          />
 
-        <InputField
-          required
-          type="text"
-          label="LAST NAME"
-          name="lastName"
-          minlength="2"
-          value={lastName}
-          title="Must be at least 2 non-digit characters"
-          pattern="([a-zA-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
-          onChange={e => setLastName(e.target.value)}
-        />
+          <InputField
+            required
+            type="text"
+            label="LAST NAME"
+            name="lastName"
+            minlength="2"
+            value={lastName}
+            title="Must be at least 2 non-digit characters"
+            pattern="([a-zA-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
+            onChange={e => setLastName(e.target.value)}
+          />
 
-        <InputField
-          required
-          type="text"
-          label="ADDRESS"
-          name="address1"
-          value={address1}
-          minlength="5"
-          title="Must be at least 5 characters"
-          pattern="[a-zA-ZÀ-ÿ0-9 /\\#.,&\(\)]{5,35}"
-          onChange={e => setAddress1(e.target.value)}
-        />
-        <InputField
-          type="text"
-          label="ADDRESS 2 (OPTIONAL)"
-          name="address2"
-          value={address2}
-          minlength="5"
-          title="Must be at least 5 characters"
-          pattern="[a-zA-ZÀ-ÿ0-9 /\\#.,&\(\)]{5,35}"
-          onChange={e => setAddress2(e.target.value)}
-        />
+          <InputField
+            required
+            type="text"
+            label="ADDRESS"
+            name="address1"
+            value={address1}
+            minlength="5"
+            title="Must be at least 5 characters"
+            pattern="[a-zA-ZÀ-ÿ0-9 /\\#.,&\(\)]{5,35}"
+            onChange={e => setAddress1(e.target.value)}
+          />
+          <InputField
+            type="text"
+            label="ADDRESS 2 (OPTIONAL)"
+            name="address2"
+            value={address2}
+            minlength="5"
+            title="Must be at least 5 characters"
+            pattern="[a-zA-ZÀ-ÿ0-9 /\\#.,&\(\)]{5,35}"
+            onChange={e => setAddress2(e.target.value)}
+          />
 
-        <button type="submit" name="Submit" disabled={isDisabled}>
-          Next <WhiteArrow className="arrow" />
-        </button>
-      </form>
+          <button type="submit" name="Submit" disabled={isDisabled}>
+            Next
+            <WhiteArrow className="arrow" />
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -3,13 +3,14 @@ label {
     font-family: "Merriweather", serif;
     font-size: 12px;
     font-weight: 400;
+    margin-right: 5px;
 }
 
 .labels {
-    display: "flex";
-    flex-direction: row;
+    display: flex;
+    justify-content: left;
     margin-bottom: 5px;
-    margin-left: 24px;
+    width: 100%;
 }
 
 span.showing {
@@ -55,10 +56,8 @@ input {
     font-size: 14px;
     font-weight: 400;
     height: 48px;
-    margin-left: 24px;
-    max-width: 376px;
     padding-left: 16px;
-    width: inherit;
+    width: 100%;
 }
 
 .field {
@@ -67,17 +66,13 @@ input {
     flex-direction: column;
     margin: 0 0 24px 0;
     max-width: 400px;
-    width: inherit;
 }
 
 @media(max-width:935px) {
-    form {
-        min-width: 420px;
-    }
     input {
-        width: inherit;
+        width: 100%;
     }
     .field {
-        width: inherit;
+        max-width: inherit;
     }
 }

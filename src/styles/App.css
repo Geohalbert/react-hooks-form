@@ -1,11 +1,23 @@
 .App {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  width: inherit;
 }
 
 .leftPanel {
+  display: flex;
+  justify-content: flex-end;
+  padding: 32px 24px 32px 24px;
   background-color: #585858;
+  height: 100vh;
+  width: 100%;
+}
+
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 100px 24px 24px 24px;
   height: 100vh;
   width: 100%;
 }
@@ -14,10 +26,9 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin: 32px 80px 0px auto;
   max-width: 535px;
+  width: inherit;
   overflow: auto;
-  padding: 32px 20px 32px 20px;
 }
 
 .robotLogo {
@@ -28,11 +39,12 @@
 }
 
 .welcome {
+  height: auto;
+  margin: 0 0 0 0;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
   font-weight: 700;
-  margin-bottom: 16px;
 }
 
 .subText {
@@ -42,13 +54,11 @@
 }
 
 form {
-  align-items: flex-start;
+  justify-content: baseline;
   display: flex;
   flex-direction: column;
-  margin-top: 64px;
-  min-width: 400px;
-  padding: 32px 0 0 0;
-  width: 100%;
+  max-width: 400px;
+  overflow: auto;
 }
 
 .arrow {
@@ -57,19 +67,20 @@ form {
   width: 10px;
 }
 
-button {
+button {display: table;
   background: #FFAB44;
   border-radius: 6px;
   border-style: none;
+  box-sizing: border-box;
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 700;
+  width: auto;
   height: 48px;
-  margin: 24px 0 0 24px;
+  margin: 24px auto 24px 0px;
   outline: 0;
   padding: 0 24px 0 24px;
-  width: auto;
 }
 
 button:focus {
@@ -80,25 +91,35 @@ button:disabled {
   background: #FFAB4450;
 }
 
-@media(max-width:935px) {
+@media(max-width:600px) {
   .App {
-    min-width: 400px;
+    width: inherit;
     flex-direction: column;
-    width: 100%;
   }
   .greetingContainer {
     height: auto;
-    max-width: inherit;
+    font-size: 14px;
+    max-width: none;
   }
   .leftPanel {
-    min-width: 100%;
     height: auto;
+    width: inherit;
+    justify-content: left;
+  }
+  .rightPanel {
+    height: auto;
+    width: inherit;
+    padding: 32px 24px 24px 24px;
+  }
+  .subText {
+    font-size: 14px;
   }
   form {
-    width: inherit;
+    min-width: none;
+    margin-top: 0px;
   }
   button {
-    max-width: 376px;
-    width: inherit;
+    max-width: none;
+    width: 100%;
   }
 }
