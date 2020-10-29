@@ -30,6 +30,8 @@ input.error {
     border: 1px solid #E70000;
   }
 
+
+/* this is required to keep the inputs from starting invalid */
 input:invalid, input:not[value=""] {
     background-color: #ffffff;
     border: 1px solid #E70000;
@@ -46,6 +48,7 @@ input:focus {
     border: 1px solid #00adee;
 }
 
+/* margins removed, width changed from inherit to 100% , max-width removed because padding does this already */
 input {
     background-color: #f7f7f7;
     border: 1px solid #EAEAEA;
@@ -60,6 +63,7 @@ input {
     width: 100%;
 }
 
+ /* width: inherit removed */
 .field {
     align-items: flex-start;
     display: flex;
@@ -69,9 +73,11 @@ input {
 }
 
 @media(max-width:935px) {
+    /* width: inherit removed and max-width */
     input {
         width: 100%;
     }
+    /* was max-width: 400px and width: inherit */
     .field {
         max-width: inherit;
     }

@@ -1,8 +1,12 @@
+/*  flex-direction is not necessary, added 'justify-content: center' */
+
 .App {
   display: flex;
   justify-content: center;
   width: inherit;
 }
+
+/* padding for container belongs in left panel container */
 
 .leftPanel {
   display: flex;
@@ -12,6 +16,8 @@
   height: 100vh;
   width: 100%;
 }
+
+/* right panel is similar to left */
 
 .rightPanel {
   display: flex;
@@ -38,6 +44,8 @@
   width: 177px;
 }
 
+/* margin-bottom removed from oringinal */
+
 .welcome {
   height: auto;
   margin: 0 0 0 0;
@@ -53,6 +61,8 @@
   font-size: 14px;
 }
 
+/* width and margins removed */
+
 form {
   justify-content: baseline;
   display: flex;
@@ -67,7 +77,9 @@ form {
   width: 10px;
 }
 
-button {display: table;
+/* display: table is the key to having the button avoid filling in width */
+button {
+  display: table;
   background: #FFAB44;
   border-radius: 6px;
   border-style: none;
@@ -92,10 +104,12 @@ button:disabled {
 }
 
 @media(max-width:600px) {
+  /* width should be inherit and not 100% */
   .App {
     width: inherit;
     flex-direction: column;
   }
+  /* max-width should be none and not inherit */
   .greetingContainer {
     height: auto;
     font-size: 14px;
@@ -114,6 +128,7 @@ button:disabled {
   .subText {
     font-size: 14px;
   }
+  /* width should be unchanged and min-width should be set to none */
   form {
     min-width: none;
     margin-top: 0px;
