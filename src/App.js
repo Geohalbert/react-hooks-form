@@ -1,5 +1,4 @@
 import { useState } from "react";
-// Underscores need to be deleted to remove warnings in terminal
 import { ReactComponent as GiantRobotLTDLogo } from "./assets/GiantRobotLTD_Logo.svg";
 import { ReactComponent as WhiteArrow } from "./assets/White_Arrow.svg";
 import InputField from "./components/InputField";
@@ -23,7 +22,6 @@ export default function App() {
     input.addEventListener(
       "invalid",
       event => {
-        // created an error class that is applied after hitting submit
         input.classList.add("error");
         if (input.getAttribute("required") !== null) {
           document.getElementById(reqId).classList.add("showing");
@@ -53,7 +51,6 @@ export default function App() {
           </p>
         </div>
       </div>
-      {/* a container for the should have been created for the form section, just like the welcome section */}
       <div className="rightPanel">
         <form onSubmit={handleSubmit}>
           <InputField
