@@ -3,23 +3,35 @@ label {
     font-family: "Merriweather", serif;
     font-size: 12px;
     font-weight: 400;
+    margin-right: 5px;
 }
 
 .labels {
-    display: "flex";
-    flex-direction: column;
+    display: flex;
+    justify-content: left;
     margin-bottom: 5px;
-    margin-left: 24px;
+    width: 100%;
 }
 
-.reqLabel {
-    color: #E70000;
+span.showing {
+    display: block;
+    color: red;
     font-family: "Merriweather", serif;
     font-size: 12px;
     font-weight: 400;
 }
 
-input:invalid {
+span {
+    display: none;
+}
+
+input.error {
+    background-color: #ffffff;
+    border: 1px solid #E70000;
+  }
+
+
+input:invalid, input:not[value=""] {
     background-color: #ffffff;
     border: 1px solid #E70000;
 }
@@ -30,12 +42,9 @@ input:valid {
 }
 
 input:focus {
+    outline: none;
     background-color: #ffffff;
     border: 1px solid #00adee;
-}
-
-input:focus:invalid {
-    outline: none;
 }
 
 input {
@@ -48,28 +57,23 @@ input {
     font-size: 14px;
     font-weight: 400;
     height: 48px;
-    margin-left: 24px;
-    max-width: 376px;
     padding-left: 16px;
-    width: inherit;
+    width: 100%;
 }
 
-.field {
+ .field {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     margin: 0 0 24px 0;
     max-width: 400px;
-    width: inherit;
 }
 
 @media(max-width:935px) {
     input {
-        max-width: 376px;
-        width: inherit;
+        width: 100%;
     }
     .field {
-        max-width: 400px;
-        width: inherit;
+        max-width: inherit;
     }
 }
